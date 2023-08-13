@@ -66,4 +66,54 @@ func main() {
 	fmt.Println(studentHeight)
 	fmt.Println(studentBodyCount)
 	fmt.Println(studentIndexNumber)
+	
+	// Shorthand for writing variables
+	girlsNumber := 50
+	boysNumber := 45
+	teachersNumber := 19
+	// Here above, Go automatically infers that girlsNumber, boysNumber is of type int
+	var totalChildren int
+	totalChildren = boysNumber + girlsNumber
+	fmt.Println("The result of all children is: ", totalChildren)
+	fmt.Println("All teachers we have are : ", teachersNumber)
+
+	// Shorthand notation for declaring multiple variables in a single line
+	initial := "His"
+
+	// Declaration of 3 variables of type string and int respectively
+	childFirstName, childNickName, childAge := "Gad", "Iradufasha", 20
+	fmt.Println(initial, " name is ", childFirstName, " ", childNickName, " and ", childAge, " years old!")
+
+	// 4: Shorthand NB:
+	// This shorthand can only be used when at least on of the variable
+	// On the left side of := is newly declared
+
+	number1, number2 := 599, 377
+	fmt.Println("Number 1: ", number1, " Number 2: ", number2)
+
+	// Number2 is already declared but Number2 is new
+	number2, number3 := 328, 260
+	fmt.Println("Number 2: ", number2, " Number 3: ", number3)
+
+	// Assigning new values to already declared variables
+	number1, number2, childAge = 12, 44, 3
+
+	/*
+		Using this shorthand when there is no new variable result to error!
+		number1, number2, childAge := 12, 44, 3
+	*/
+	fmt.Println("Number 1: ", number1, " Number 2: ", number2, " Child Age : ", childAge)
+
+	// 2: Assigning variable values which are computed during run time is possible
+	n1, n2 := 394.4, 64.5
+	minimumValue := math.Min(n1, n2)
+	maximumValue := math.Max(n2, n1)
+	fmt.Println("Maximum value is: ", maximumValue)
+	fmt.Println("Minimum value is: ", minimumValue)
+
+	// Go being strongly typed.
+	// Variables declared as belonging to one type cannot be assigned a value of another type.
+	sumOfStudents := 4000
+	// sumOfStudents = "Gad"
+	fmt.Println("Total amount is : ", sumOfStudents)
 }
