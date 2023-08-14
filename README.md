@@ -72,3 +72,117 @@ Module path can correspond a repo you plan to publish your module to.
 > An entry point of GO is main function...
 > A go program can only have 1 main function, because you can only have one (1) entry point.
 
+
+# GO DRAFT
+
+## Constants
+Constants are like variables, except that their values cannot be changed.
+
+## Print formatted data
+(Whebever we are printed our text mixed with vairables: )
+> fmt.printf("Some text with a variable %s", myVariable)
+
+
+# Data types
+> In any programming languages you have multiple data types
+> Difference: which data types do they support exactly?
+>  Strings, Booleans, Arrays, Integers, Maps, etc....
+
+# Different data types
+> Each data types can do different things and behaves differently
+> Note: Go is a statically typed language: you need to tell Go compiler, the data type when declaring the variables
+
+> In Go, you detect/discover mistakes at compile time, NOT at runtime...
+
+Strings
+Integers 
+Booleans 
+Maps
+Arrays
+
+## %T Lets you print any type of variable
+---
+
+## Floating Point Types
+Numbers that can contain a decimal component
+> Use Cases: 
+Statistical Data
+Monetary Data
+
+## "fmt" package
+> Different functions for: 
+Formatted input and Output (I/O)
+Print messages
+Collect user Input
+Write into a file
+
+## Pointer (What is a pointer?)
+> A pointer is avariable that points to the memory address of another variable.
+> In go lang, a pointer is called a special variable.
+
+## Why Using Pointer?
+
+
+## Scan 
+> Scan(userName)
+Scan("")  -> Passing the variable
+
+> Scan(&userName)
+Scan(0xc00124) -> Passing the reference
+
+
+#Arrays and Slices in Go
+
+"Peter", "Dan", "Paula"
+We want to store the entered data in some kind of a list!
+
+We want to store the entered data in some kind of a list to keep track of 
+**Who is attending the conference **  **Who booked the tickets? **  
+ > Data structure to store collection or elements in a single variable is:
+"Gad", "Dan", "Peter", "Dan", "Paula"
+> We want to store the entered user data in some kind of a list.
+
+
+## Lets create an array for all the booking!
+Arrays in go has fixed size
+Fixed size = How many elements the array can hold
+> var variable_name [size] variable type
+
+# SLICES
+Problem with array
+bookings = ["Tom", ...........................]
+booking 1 user books all the tickets..
+having a array with size 50, with only 1 element inside is not sufficient/
+#What if we don't know the size when creating it? 
+
+# What is slices in Go?
+Slice is an abstraction of an Array
+Slices are more flexible and powerful: variable-length or get a sub-array of its own.
+Slices are also index-based and have a size, But is resized when needed.
+
+> To define an array, We basically create an array without a size definition 
+
+## Append:
+>It adds the element(s) at the end of the slice.
+> Grows the slice if a greater capacity is needed and returns the updated value.
+> Adding value to a slice is different than array but retrieving the value is the same..
+
+# Loops in Go
+
+## For each loop
+bookings = ["Bob Marley", "Micheal Jack"]
+> For each element in the list, we want to executre the same logic!
+We want to have this, To print only the first names.
+firstNames = ["Bob", "Micheal"]
+
+
+> **Range** iterate over elements for different elements for different data structures. So, Not only arrays and slices.
+
+> For arrays and slices , range provides the index and value for each element.
+
+> "strings.Fields()"
+Splits the string with white space as separator.
+"Nicole Smith"    and ["Nicole", "Smith"]
+
+
+
