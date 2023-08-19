@@ -1,6 +1,6 @@
 package main
 
-// Importing variables
+// Importing builtin functions
 import (
 	"fmt"
 	"unsafe"
