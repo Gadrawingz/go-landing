@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -34,6 +35,11 @@ func main() {
 	fmt.Printf("Type is: %T, then value %v \n", wifeName, wifeName)
 	fmt.Printf("Type is: %T, then value %v \n", realWifeName, realWifeName)
 
+	// Why the value of a constant should be known at compile time
+	var squaredNumber1 = math.Sqrt(5) // Allowed
+	//const squaredNumber2 = math.Sqrt(5) // Not Allowed
+	fmt.Println(squaredNumber1, "Allowed")
+
 	// Creating a typed constant
 	const typedName string = "Clara"
 	const typedAge int = 80
@@ -57,12 +63,21 @@ func main() {
 	fmt.Println(customBoolean)
 
 	// Numeric Constants
-	const numberOne int = 1
-	var numberOneIntVar int = numberOne
-	fmt.Println(numberOneIntVar)
-	//var numberOneInt32Var int32 = numberOne
-	//var numberOneFloat64Var float64 = numberOne
-	//var numberOneComplex64var complex64 = numberOne
-	//fmt.Println("intVar", numberOne, "\nint32Var", numberOneIntVar, "\nfloat64Var", numberOneInt32Var, "\ncomplex64Var", numberOneFloat64Var, ": ", numberOneComplex64var)
+	const a = 5
+	var intVar int = a
+	var int32Var int32 = a
+	var float64Var float64 = a
+	var complex64Var complex64 = a
+	fmt.Println("intVar", intVar, "\nint32Var", int32Var, "\nfloat64Var", float64Var, "\ncomplex64Var", complex64Var)
+	fmt.Printf("The type of intVar is : %T, float64var: %T, complex64Var : %T \n", intVar, float64Var, complex64Var)
+
+	/*
+		NB1: Numeric constants are free to be mixed and matched in expressions and
+		a type is needed only when they are assigned to variables or used in any
+		place in code which demands a type.
+	*/
+	var mixedExpression = 7.82 / 4
+	fmt.Println("The value is:", mixedExpression)
+	fmt.Printf("The type: %T, The value: %v", mixedExpression, mixedExpression)
 
 }
